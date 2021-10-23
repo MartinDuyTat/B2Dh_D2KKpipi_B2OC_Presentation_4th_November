@@ -164,30 +164,8 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Binned measurement of $\gamma$}
-  \begin{itemize}
-    \item{Enhance sensitivity through binning of phase space}
-    \item{Need strong phases of $D$ decay $\to$ Measure at BESIII!}
-    \item{LHCb-PAPER-2020-019: $B^\pm\to Dh^\pm$, $D\to K_S^0 h^+h^-$}
-    \begin{itemize}
-      \item{Single most precise measurement: $\gamma = (68.7^{+5.2}_{-5.1})^\circ$}
-    \end{itemize}
-  \end{itemize}
-  \begin{figure}
-    \includegraphics[width = 0.50\textwidth]{Plots/KsPiPi_optimal.png}
-  \end{figure}
-\end{frame}
-
-\section{Binned \texorpdfstring{$\gamma$}{gamma} analysis of the \texorpdfstring{$D\to K^+K^-\pi^+\pi^-$}{D->KKpipi} mode}
-\begin{frame}{The $D\to K^+K^-\pi^+\pi^-$ decay}
-  \begin{center}
-    {\huge Binned $\gamma$ analysis of the $D\to K^+K^-\pi^+\pi^-$ mode}
-  \end{center}
-\end{frame}
-
-\begin{frame}{The $D\to K^+K^-\pi^+\pi^-$ decay}
+\begin{frame}{Measurement of $\gamma$ from $B^\pm\to DK^\pm$, $D\to K^+K^-\pi^+\pi^-$}
   \vspace{0.0cm}
-  {\Large Measurement of $\gamma$ from $B^\pm\to DK^\pm$, $D\to K^+K^-\pi^+\pi^-$}
   \vspace{0.5cm}
   \begin{itemize}
     \setlength\itemsep{1.2em}
@@ -202,15 +180,39 @@
       \item{\href{https://arxiv.org/abs/1201.5716}{arXiv:1201.5716}}
       \item{Expected $\gamma$ precision with $2000$ candidates: $11^\circ$}
     \end{itemize}
-    \item{State of the art amplitude analysis by LHCb LHCb-PAPER-2018-041:}
+    \item{State of the art amplitude analysis by LHCb :}
     \begin{itemize}
-      \item{Used to develop efficient binning scheme in this analysis}
-      \item{Final measurement will be \underline{model-independent}}
-      \item{Poor binning reduces statistical sensitivity $\to$ No bias!}
+      \item{\href{https://cds.cern.ch/record/2648586?ln=en}{LHCb-PAPER-2018-041}}
+      \item{Use to develop efficient binning scheme}
     \end{itemize}
   \end{itemize}
 \end{frame}
 
+\section{Binned \texorpdfstring{$\gamma$}{gamma} analysis of the \texorpdfstring{$D\to K^+K^-\pi^+\pi^-$}{D->KKpipi} mode}
+\begin{frame}{The $D\to K^+K^-\pi^+\pi^-$ decay}
+  \begin{center}
+    {\huge Binned $\gamma$ analysis of the $D\to K^+K^-\pi^+\pi^-$ mode}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Binned measurement of $\gamma$}
+  \begin{itemize}
+    \setlength\itemsep{0.5em}
+    \item{Final measurement will be \underline{model-independent}}
+    \begin{itemize}
+      \item{Poor binning reduces statistical sensitivity $\to$ No bias!}
+    \end{itemize}
+    \item{Need strong phases of $D$ decay $\to$ Measure at BESIII}
+    \item{LHCb-PAPER-2020-019: $B^\pm\to Dh^\pm$, $D\to K_S^0 h^+h^-$}
+    \begin{itemize}
+      \item{Single most precise measurement: $\gamma = (68.7^{+5.2}_{-5.1})^\circ$}
+    \end{itemize}
+  \end{itemize}
+  \begin{figure}
+    \includegraphics[height = 4cm]{Plots/KsPiPi_optimal.png}
+    \includegraphics[height = 4cm]{Plots/KsKK_binning.png}
+  \end{figure}
+\end{frame}
 
 \begin{frame}{The BPGGSZ method}
   \begin{itemize}
@@ -268,8 +270,8 @@
   \vspace{0.0cm}
   {\Large A binning scheme must satisfy the following:}
   \begin{itemize}
-    \item{Avoid dilution of strong phases when integrating over bins}
-    \item{Enhance interferences between $B^\pm\to D^0h^\pm$ and $B^\pm\to\bar{D^0}h^\pm$ amplitudes}
+    \item{Minimal dilution of strong phases when integrating over bins}
+    \item{Enhance interference between $B^\pm\to D^0h^\pm$ and $B^\pm\to\bar{D^0}h^\pm$}
   \end{itemize}
   \vspace{0.4cm}
   {\Large How to bin a 5-dimensional phase space?}
@@ -293,7 +295,7 @@
   \vspace{-1.0cm}
   \begin{center}
     $Q = 0.90$ \\
-    Bins $i > 0$ on top, $i < 0$ below
+    Bins $i < 0$ on top, $i > 0$ below
   \end{center}
 \end{frame}
 
@@ -312,7 +314,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{Study of $\gamma$ precision}
+\begin{frame}{$\gamma$ precision benchmark}
   \begin{itemize}
     \item{Generate $2000$ $B^\pm\to DK^\pm$ candidates using LHCb model in AmpGen}
     \item{Fit back with same model using AmpGen}
@@ -352,7 +354,7 @@
     \end{subfigure}
   \end{figure}
   \begin{center}
-    Precision of $\gamma$ in unbinned fit: $12^\circ$ \\
+    Precision of $\gamma$ in binned fit: $12^\circ$ \\
     Consistent with unbinned fit and $Q$-value
   \end{center}
 \end{frame}
@@ -392,7 +394,7 @@
       \item{$\text{StrippingB2D0PiD2HHHHBeauty2CharmLineDecision}$}
       \item{$\text{StrippingB2D0KD2HHHHBeauty2CharmLineDecision}$}
     \end{itemize}
-    \item{Data samples: 2011-2018 (2011-2012 not processed yet)}
+    \item{Data samples: 2011-2018 (Run 1 and 2)}
     \item{MC samples: 2011-2018 (excluding 2015), filtered, AmpGen}
   \end{itemize}
 \end{frame}
@@ -633,7 +635,7 @@
   \begin{figure}
     \centering
     \includegraphics[width = 1.0\textwidth]{Plots/d2kkpipi_fiveL_allDP.pdf}
-    \caption{Global fit of $B^\pm$ mass distribution for the $DK^\pm$ channel (left) and $D\pi^\pm$ channel (right)}
+    \caption{$B^\pm\to DK^\pm$ channel (left) and $B^\pm\to D\pi^\pm$ channel (right)}
   \end{figure}
   \vspace{-0.5cm}
   \begin{itemize}
@@ -757,72 +759,56 @@
   \end{figure}
 \end{frame}
 
-\section{Systematics}
-\begin{frame}{Systematics}
+\section{Systematic uncertainty}
+\begin{frame}{Systematic uncertainties}
   \begin{center}
-    {\huge Systematics}
+    {\huge Systematic uncertainties}
   \end{center}
-\end{frame}
-
-\begin{frame}
-  \begin{center}
-    Summary of all systematics
-  \end{center}
-  \begin{tabular}{lcccccc} 
-    \hline
-    Source & $x_-^{DK}$ & $y_-^{DK}$ & $x_+^{DK}$ & $y_+^{DK}$ & $x_\xi^{D\pi}$ & $y_\xi^{D\pi}$ \\
-    \hline
-    Statistical                              & 2.73  & 3.23  & 2.38  & 2.90  & 4.30  & 5.27  \\
-    \hline
-    $c_i$, $s_i$                             & 0.66  & 1.55  & 0.32  & 1.31  & 1.73  & 1.03  \\
-    \hline
-    $D\to K(X)l\nu_l$ background             & -0.15 & 0.05  & -0.11 & 0.03  & 0.35  & -0.25 \\
-    $D\to K\pi\pi\pi$ background             & -0.17 & 0.03  & -0.04 & 0.01  & 0.46  & -0.18 \\
-    $\Lambda_b$ background                   & 0.09  & 0.11  & -0.00 & -0.18 & 0.16  & 0.21  \\
-    Bin dependent mass shape                 & -0.21 & -0.05 & -0.17 & 0.01  & 0.37  & -0.11 \\
-    Low mass physics effects                 & 0.05  & -0.09 & -0.05 & -0.18 & 0.41  & -0.48 \\
-    Mass shape                               & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01  \\
-    Fixed yield fractions                    & 0.02  & 0.03  & 0.02  & 0.02  & 0.01  & 0.01  \\
-    PID Efficiency                           & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01  \\
-    Fit bias                                 & 0.19  & 0.03  & 0.16  & -0.04 & 0.30  & -0.16 \\
-    \hline
-    Total LHCb systematic                    & 0.39  & 0.17  & 0.27  & 0.26  & 0.87  & 0.64  \\
-    \hline
-    Total systematic                         & 0.76  & 1.55  & 0.41  & 1.33  & 1.93  & 1.21  \\
-    \hline
-  \end{tabular}
 \end{frame}
 
 \begin{frame}{$c_i$ and $s_i$ systematic uncertainty}
   \begin{itemize}
     \setlength\itemsep{1.5em}
-    \item{Originate from (mostly statistical) uncertainty of $c_i$ and $s_i$ in BESIII analysis}
-    \item{By far the largest systematic uncertainty}
+    \item{Uncertainty of $c_i$ and $s_i$ in BESIII analysis (mostly statistical)}
+    \item{Largest systematic uncertainty}
     \item{Take uncertainties from $D\to4\pi$ strong phase analysis and extrapolate to $\SI{20}{\per\femto\barn}$}
     \item{Smear $c_i$ and $s_i$ and do many fits to data}
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Remaining systematic uncertainties}
+  Different strategies for evaluating systematic uncertainties:
+  \vspace{0.2cm}
   \begin{itemize}
     \setlength\itemsep{1em}
-    \item{For these systematics, generate toy datasets, fit with default model and take the bias as a systematic:}
+    \item{Generate toy datasets with systematics, fit with default model and take the bias as a systematic:}
     \begin{itemize}
       \item{Small backgrounds ($D\to K(X)l\nu_l$, $D\to K\pi\pi\pi$, $\Lambda_b$)}
       \item{Bin dependent mass shape}
       \item{Low mass physics effects}
     \end{itemize}
-    \item{For these systematics, do multiple fits to data while smearing parameters:}
+    \item{Do multiple fits to data while smearing parameters:}
     \begin{itemize}
+      \item{$c_i$ and $s_i$}
       \item{Mass shape}
       \item{Fixed yield fractions}
       \item{PID efficiency}
     \end{itemize}
-    \item{Fit bias: From toys}
+    \item{Fit bias: Take bias toys as systematic uncertainty}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Efficiency difference between $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pi$}
+\begin{frame}{Efficiency related systematics}
+  Efficiency related systematics:
+  \vspace{0.7cm}
+  \begin{itemize}
+    \setlength\itemsep{2em}
+    \item{Difference in $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ phase space acceptance}
+    \item{Efficiency correction of $c_i$ and $s_i$}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Efficiency differences between $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$}
   \begin{figure}
     \centering
     \begin{subfigure}{0.33\textwidth}
@@ -895,6 +881,35 @@
   \end{center}
 \end{frame}
 
+\begin{frame}{Summary of all systematic uncertainties}
+  \begin{center}
+    {\Large Summary of all systematic uncertainties}
+  \end{center}
+  \begin{tabular}{lcccccc} 
+    \hline
+    Source & $x_-^{DK}$ & $y_-^{DK}$ & $x_+^{DK}$ & $y_+^{DK}$ & $x_\xi^{D\pi}$ & $y_\xi^{D\pi}$ \\
+    \hline
+    Statistical                              & 2.73  & 3.23  & 2.38  & 2.90  & 4.30  & 5.27  \\
+    \hline
+    $c_i$, $s_i$                             & 0.66  & 1.55  & 0.32  & 1.31  & 1.73  & 1.03  \\
+    \hline
+    $D\to K(X)l\nu_l$ background             & -0.15 & 0.05  & -0.11 & 0.03  & 0.35  & -0.25 \\
+    $D\to K\pi\pi\pi$ background             & -0.17 & 0.03  & -0.04 & 0.01  & 0.46  & -0.18 \\
+    $\Lambda_b$ background                   & 0.09  & 0.11  & -0.00 & -0.18 & 0.16  & 0.21  \\
+    Bin dependent mass shape                 & -0.21 & -0.05 & -0.17 & 0.01  & 0.37  & -0.11 \\
+    Low mass physics effects                 & 0.05  & -0.09 & -0.05 & -0.18 & 0.41  & -0.48 \\
+    Mass shape                               & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01  \\
+    Fixed yield fractions                    & 0.02  & 0.03  & 0.02  & 0.02  & 0.01  & 0.01  \\
+    PID Efficiency                           & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01  \\
+    Fit bias                                 & 0.19  & 0.03  & 0.16  & -0.04 & 0.30  & -0.16 \\
+    \hline
+    Total LHCb systematic                    & 0.39  & 0.17  & 0.27  & 0.26  & 0.87  & 0.64  \\
+    \hline
+    Total systematic                         & 0.76  & 1.55  & 0.41  & 1.33  & 1.93  & 1.21  \\
+    \hline
+  \end{tabular}
+\end{frame}
+
 \section{Summary and conclusion}
 \begin{frame}{Summary and conclusion}
   \begin{center}
@@ -902,7 +917,7 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Interpretation in terms of $\gamma$}
+\begin{frame}{Summary of CP observables}
   \begin{itemize}
     \item{Measured CP observables:}
   \end{itemize}
@@ -914,8 +929,9 @@
     x_\xi^{D\pi} =& (x.x \pm 4.3 \pm 0.9 \pm 1.7)\times 10^{-2}, \\
     y_\xi^{D\pi} =& (x.x \pm 5.3 \pm 0.6 \pm 1.0)\times 10^{-2},
   \end{align*}
+  \vspace{-0.5cm}
   \begin{itemize}
-    \item{Note: Currently CP observables are determined using $c_i$ and $s_i$ from the \underline{LHCb model}}
+    \item{Note: Currently using $c_i$ and $s_i$ from the \underline{LHCb model}}
     \item{Publication strategy: Publish current results together with binned yields $\to$ Redo fit to obtain model-independent CP observables once $c_i$ and $s_i$ from BESIII are available}
   \end{itemize}
 \end{frame}
