@@ -299,21 +299,6 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Binning scheme}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/BinningSchemePlot_4Bins.png}
-      \caption{$Q = 0.85$}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/BinningSchemePlot_6Bins.png}
-      \caption{$Q = 0.89$}
-    \end{subfigure}
-  \end{figure}
-\end{frame}
-
 \begin{frame}{$\gamma$ precision benchmark}
   \begin{itemize}
     \item{Generate $2000$ $B^\pm\to DK^\pm$ candidates using LHCb model in AmpGen}
@@ -359,26 +344,6 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Comparison of binned fit precision with unbinned fit}
-  \begin{figure}
-    \centering
-    \includegraphics[width = 0.8\textwidth]{Plots/GammaPrecisionVersusBinNumber.png}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{$c_i$, $s_i$ and $F_i$}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.425\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/StrongPhaseParametersPlot_cisi_8Bins.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.575\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/StrongPhaseParametersPlot_Fi_8Bins.png}
-    \end{subfigure}
-  \end{figure}
-\end{frame}
-
 \section{\texorpdfstring{$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$}{B to K+ K- pi+ pi- h} selection}
 \begin{frame}{$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$ selection}
   \begin{center}
@@ -389,35 +354,17 @@
 \begin{frame}{Samples}
   \begin{itemize}
     \setlength\itemsep{1.2em}
-    \item{Stripping lines:}
+    \item{Data sample: Full Run 1 and 2}
+    \item{MC samples: Full Run 1 and 2 excluding 2015}
     \begin{itemize}
-      \item{$\text{StrippingB2D0PiD2HHHHBeauty2CharmLineDecision}$}
-      \item{$\text{StrippingB2D0KD2HHHHBeauty2CharmLineDecision}$}
+      \item{AmpGen model}
+      \item{Large filtered samples}
     \end{itemize}
-    \item{Data samples: 2011-2018 (Run 1 and 2)}
-    \item{MC samples: 2011-2018 (excluding 2015), filtered, AmpGen}
   \end{itemize}
-\end{frame}
-
-\begin{frame}{Initial cuts}
-  \begin{center}
-    Rectangular cuts before BDT
-  \end{center}
-  \centering
-  \def\arraystretch{1.2}%
-  \begin{tabular}{lllc} 
-    \hline
-    Number & Variable description   & Cut \\
-    \hline
-    $1$    & DTF converged          & True \\
-    $2$    & Bachelor momentum      & $< 100\si{\giga\eV}$ \\
-    $3$    & Bachelor has RICH      & True \\
-    $4$    & $D$ invariant mass     & $[1839.84, 1889.84]\si{\mega\eV}$ \\
-    $5$    & $B^\pm$ invariant mass & $[5080, 5800]\si{\mega\eV}$ \\
-    $6$    & $K^\pm$ daughter PID   & $> -10$ \\
-    $7$    & $\pi^\pm$ daughter PID & $< 20$ \\
-    \hline
-  \end{tabular}
+  \begin{block}{Stripping lines}
+    $\text{StrippingB2D0PiD2HHHHBeauty2CharmLineDecision}$ \\
+    $\text{StrippingB2D0KD2HHHHBeauty2CharmLineDecision}$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Boosted Decision Tree}
@@ -425,7 +372,7 @@
     \setlength\itemsep{1.2em}
     \item{BDTG from TMVA Toolkit}
     \item{Signal sample: $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ MC samples}
-    \item{Background sample: $B^\pm\to D\pi^\pm$ using $m_{B^\pm}^\text{DTF}\in[5800, 7000]\si{\mega\eV}$}
+    \item{Background sample: Data sample with $m_{B^\pm}^\text{DTF}\in[5800, 7000]\si{\mega\eV}$}
     \item{Random, equal sized test and training samples}
   \end{itemize}
 \end{frame}
@@ -464,65 +411,10 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Final cuts}
-  \begin{center}
-    Rectangular cuts after BDT
-  \end{center}
-  \centering
-  \def\arraystretch{1.2}%
-  \begin{tabular}{lllc} 
-    \hline
-    Number & Variable description     & Cut \\
-    \hline
-    $8$    & $K^\pm$ bachelor PID     & $> 4$ \\
-    $9$    & $\pi^\pm$ bachelor PID   & $< 4$ \\
-    $10$   & Bachelor is muon         & False \\
-    $11$   & $z$ flight significance  & $> 2$ \\
-    $12$   & $K^\pm$ PID              & $> 0$ \\
-    $13$   & $K_S^0$ mass veto        & $[477, 507]\si{\mega\eV}$ \\
-    \hline
-  \end{tabular}
-\end{frame}
-
 \section{Backgrounds}
 \begin{frame}{Backgrounds}
   \begin{center}
     {\huge Backgrounds}
-  \end{center}
-\end{frame}
-
-\begin{frame}{$D$ semileptonic backgrounds}
-  \begin{itemize}
-    \setlength\itemsep{1em}
-    \item{$B^\pm\to Dh^\pm$, $D\to K(X)l\nu$, $K(X)\to K\pi\pi$}
-    \begin{itemize}
-      \item{$K_1(1270)$}
-      \item{$K_1(1400)$}
-      \item{$K^*(1410)$}
-      \item{$K^*(1680)$}
-      \item{$K_2^*(1430)$}
-    \end{itemize}
-    \item{Single mis-ID: $K\mu\pi\pi\to KK\pi\pi$}
-    \item{Double mis-ID: $K\pi\pi\mu\to KK\pi\pi$}
-    \item{Generate Rapidsim samples, reweight with PIDCalib2}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{$D$ semileptonic backgrounds}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/D_SL_RapidSim_Combined_Fit_B2DK.png}
-      \caption{$B\to DK$}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/D_SL_RapidSim_Combined_Fit_B2Dpi.png}
-      \caption{$B\to D\pi$}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    Conclusion: Negligible impact, include in systematics
   \end{center}
 \end{frame}
 
@@ -542,7 +434,7 @@
     \end{subfigure}%
     \begin{subfigure}{0.45\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_TripleMisID_Dpi_DMass.png}
-      \caption{Triple misID}
+      \caption{Triple mis-ID}
     \end{subfigure}
     \caption{$D$ invariant mass}
   \end{figure}
@@ -557,7 +449,7 @@
     \end{subfigure}%
     \begin{subfigure}{0.5\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_TripleMisID_Dpi_BMass.png}
-      \caption{Triple misID}
+      \caption{Triple mis-ID}
     \end{subfigure}
     \caption{$B$ invariant mass}
   \end{figure}
@@ -783,7 +675,7 @@
     \setlength\itemsep{1em}
     \item{Generate toy datasets with systematics, fit with default model and take the bias as a systematic:}
     \begin{itemize}
-      \item{Small backgrounds ($D\to K(X)l\nu_l$, $D\to K\pi\pi\pi$, $\Lambda_b$)}
+      \item{Small backgrounds ($D\to K(X)l\nu_l$, $D\to K\pi\pi\pi$, $B\to Dl\nu_l$, $\Lambda_b$)}
       \item{Bin dependent mass shape}
       \item{Low mass physics effects}
     \end{itemize}
@@ -798,115 +690,30 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Efficiency related systematics}
-  Efficiency related systematics:
-  \vspace{0.7cm}
-  \begin{itemize}
-    \setlength\itemsep{2em}
-    \item{Difference in $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ phase space acceptance}
-    \item{Efficiency correction of $c_i$ and $s_i$}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Efficiency differences between $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Dalitz_s01.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Dalitz_s03.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Dalitz_s12.png}
-    \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Dalitz_s23.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Dalitz_s012.png}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    Conclusion: More or less identical phase space acceptance, no systematic uncertainty considered
-  \end{center}
-\end{frame}  
-
-\begin{frame}{Efficiency correction of $c_i$ and $s_i$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s01_BeforeReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s03_BeforeReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s12_BeforeReweighting.png}
-    \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s23_BeforeReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s012_BeforeReweighting.png}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    Need to reweight events to account for efficiency differences between AmpGen samples and LHCb MC
-  \end{center}
-\end{frame}  
-
-\begin{frame}{Efficiency correction of $c_i$ and $s_i$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s01_AfterReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s03_AfterReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s12_AfterReweighting.png}
-    \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s23_AfterReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s012_AfterReweighting.png}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    After reweighing, use weights to recalculate $c_i$ and $s_i$ \\
-    Conclusion: Efficiency correction of $c_i$ and $s_i$ is an order of magnitude smaller than their uncertainties, no systematic uncertainty considered
-  \end{center}
-\end{frame}
-
 \begin{frame}{Summary of all systematic uncertainties}
-  \begin{center}
-    {\Large Summary of all systematic uncertainties}
-  \end{center}
   \begin{tabular}{lcccccc} 
-    \hline
-    Source & $x_-^{DK}$ & $y_-^{DK}$ & $x_+^{DK}$ & $y_+^{DK}$ & $x_\xi^{D\pi}$ & $y_\xi^{D\pi}$ \\
-    \hline
-    Statistical                              & 2.73  & 3.23  & 2.38  & 2.90  & 4.30  & 5.27  \\
-    \hline
-    $c_i$, $s_i$                             & 0.66  & 1.55  & 0.32  & 1.31  & 1.73  & 1.03  \\
-    \hline
-    $D\to K(X)l\nu_l$ background             & -0.15 & 0.05  & -0.11 & 0.03  & 0.35  & -0.25 \\
-    $D\to K\pi\pi\pi$ background             & -0.17 & 0.03  & -0.04 & 0.01  & 0.46  & -0.18 \\
-    $\Lambda_b$ background                   & 0.09  & 0.11  & -0.00 & -0.18 & 0.16  & 0.21  \\
-    Bin dependent mass shape                 & -0.21 & -0.05 & -0.17 & 0.01  & 0.37  & -0.11 \\
-    Low mass physics effects                 & 0.05  & -0.09 & -0.05 & -0.18 & 0.41  & -0.48 \\
-    Mass shape                               & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01  \\
-    Fixed yield fractions                    & 0.02  & 0.03  & 0.02  & 0.02  & 0.01  & 0.01  \\
-    PID Efficiency                           & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01  \\
-    Fit bias                                 & 0.19  & 0.03  & 0.16  & -0.04 & 0.30  & -0.16 \\
-    \hline
-    Total LHCb systematic                    & 0.39  & 0.17  & 0.27  & 0.26  & 0.87  & 0.64  \\
-    \hline
-    Total systematic                         & 0.76  & 1.55  & 0.41  & 1.33  & 1.93  & 1.21  \\
-    \hline
+        \hline
+        Source & $x_-^{DK}$ & $y_-^{DK}$ & $x_+^{DK}$ & $y_+^{DK}$ & $x_\xi^{D\pi}$ & $y_\xi^{D\pi}$ \\
+        \hline
+        Statistical                              & 2.73  & 3.23  & 2.38  & 2.90  & 4.30  & 5.27  \\
+        \hline
+        $c_i$, $s_i$                             & 0.66  & 1.55  & 0.32  & 1.31  & 1.73  & 1.03  \\
+        \hline
+        $B^\pm\to D\mu\nu$ background            & 0.04  & 0.03  & 0.02  & 0.15  & 0.30  & 0.10 \\
+        $D\to K(X)l\nu_l$ background             & 0.15  & 0.05  & 0.11  & 0.03  & 0.35  & 0.25 \\
+        $D\to K\pi\pi\pi$ background             & 0.17  & 0.03  & 0.04  & 0.01  & 0.46  & 0.18 \\
+        $\Lambda_b$ background                   & 0.09  & 0.11  & 0.00  & 0.18  & 0.16  & 0.21 \\
+        Bin dependent mass shape                 & 0.21  & 0.05  & 0.17  & 0.01  & 0.37  & 0.11 \\
+        Fit bias                                 & 0.19  & 0.03  & 0.16  & 0.04  & 0.30  & 0.16 \\
+        Fixed yield fractions                    & 0.02  & 0.03  & 0.02  & 0.02  & 0.01  & 0.01 \\
+        Low mass physics effects                 & 0.05  & 0.09  & 0.05  & 0.18  & 0.41  & 0.48 \\
+        Mass shape                               & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01 \\
+        PID Efficiency                           & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01 \\
+        \hline
+        Total LHCb systematic                    & 0.39  & 0.17  & 0.27  & 0.30  & 0.92  & 0.65  \\
+        \hline
+        Total systematic                         & 0.77  & 1.55  & 0.41  & 1.34  & 1.96  & 1.22  \\
+        \hline
   \end{tabular}
 \end{frame}
 
@@ -993,6 +800,41 @@
   \end{center}
 \end{frame}
 
+\begin{frame}{Binning scheme}
+  \begin{figure}
+    \centering
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/BinningSchemePlot_4Bins.png}
+      \caption{$Q = 0.85$}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/BinningSchemePlot_6Bins.png}
+      \caption{$Q = 0.89$}
+    \end{subfigure}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$c_i$, $s_i$ and $F_i$}
+  \begin{figure}
+    \centering
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.425\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/StrongPhaseParametersPlot_cisi_8Bins.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.575\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/StrongPhaseParametersPlot_Fi_8Bins.png}
+    \end{subfigure}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Comparison of binned fit precision with unbinned fit}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Plots/GammaPrecisionVersusBinNumber.png}
+  \end{figure}
+\end{frame}
+
 \begin{frame}{Trigger requirements}
   \centering
   \def\arraystretch{1.2}%
@@ -1012,6 +854,47 @@
                          & \texttt{Bu\_Hlt2Topo3BodyDecision\_TOS} or \\
                          & \texttt{Bu\_Hlt2Topo4BodyDecision\_TOS} or \\
                          & \texttt{Bu\_Hlt2IncPhiDecision\_TOS}) \\
+    \hline
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Initial cuts}
+  \begin{center}
+    Rectangular cuts before BDT
+  \end{center}
+  \centering
+  \def\arraystretch{1.2}%
+  \begin{tabular}{lllc} 
+    \hline
+    Number & Variable description   & Cut \\
+    \hline
+    $1$    & DTF converged          & True \\
+    $2$    & Bachelor momentum      & $< 100\si{\giga\eV}$ \\
+    $3$    & Bachelor has RICH      & True \\
+    $4$    & $D$ invariant mass     & $[1839.84, 1889.84]\si{\mega\eV}$ \\
+    $5$    & $B^\pm$ invariant mass & $[5080, 5800]\si{\mega\eV}$ \\
+    $6$    & $K^\pm$ daughter PID   & $> -10$ \\
+    $7$    & $\pi^\pm$ daughter PID & $< 20$ \\
+    \hline
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Final cuts}
+  \begin{center}
+    Rectangular cuts after BDT
+  \end{center}
+  \centering
+  \def\arraystretch{1.2}%
+  \begin{tabular}{lllc} 
+    \hline
+    Number & Variable description     & Cut \\
+    \hline
+    $8$    & $K^\pm$ bachelor PID     & $> 4$ \\
+    $9$    & $\pi^\pm$ bachelor PID   & $< 4$ \\
+    $10$   & Bachelor is muon         & False \\
+    $11$   & $z$ flight significance  & $> 2$ \\
+    $12$   & $K^\pm$ PID              & $> 0$ \\
+    $13$   & $K_S^0$ mass veto        & $[477, 507]\si{\mega\eV}$ \\
     \hline
   \end{tabular}
 \end{frame}
@@ -1060,6 +943,124 @@
     \texttt{log(h[3,4]\_P)} & $1.9$ & $\pi^\pm$ momentum \\
     \hline
   \end{tabular}
+\end{frame}
+
+\begin{frame}{$D$ semileptonic backgrounds}
+  \begin{itemize}
+    \setlength\itemsep{1em}
+    \item{$B^\pm\to Dh^\pm$, $D\to K(X)l\nu$, $K(X)\to K\pi\pi$}
+    \begin{itemize}
+      \item{$K_1(1270)$}
+      \item{$K_1(1400)$}
+      \item{$K^*(1410)$}
+      \item{$K^*(1680)$}
+      \item{$K_2^*(1430)$}
+    \end{itemize}
+    \item{Single mis-ID: $K\mu\pi\pi\to KK\pi\pi$}
+    \item{Double mis-ID: $K\pi\pi\mu\to KK\pi\pi$}
+    \item{Generate Rapidsim samples, reweight with PIDCalib2}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{$D$ semileptonic backgrounds}
+  \begin{figure}
+    \centering
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/D_SL_RapidSim_Combined_Fit_B2DK.png}
+      \caption{$B\to DK$}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/D_SL_RapidSim_Combined_Fit_B2Dpi.png}
+      \caption{$B\to D\pi$}
+    \end{subfigure}
+  \end{figure}
+  \begin{center}
+    Conclusion: Negligible impact, include in systematics
+  \end{center}
+\end{frame}
+
+\begin{frame}{Efficiency related systematics}
+  Efficiency related systematics:
+  \vspace{0.7cm}
+  \begin{itemize}
+    \setlength\itemsep{2em}
+    \item{Difference in $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ phase space acceptance}
+    \item{Efficiency correction of $c_i$ and $s_i$}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Efficiency differences between $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Dalitz_s01.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Dalitz_s03.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Dalitz_s12.png}
+    \end{subfigure}
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Dalitz_s23.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Dalitz_s012.png}
+    \end{subfigure}
+  \end{figure}
+  \begin{center}
+    Conclusion: More or less identical phase space acceptance, no systematic uncertainty considered
+  \end{center}
+\end{frame}  
+
+\begin{frame}{Efficiency correction of $c_i$ and $s_i$}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s01_BeforeReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s03_BeforeReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s12_BeforeReweighting.png}
+    \end{subfigure}
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s23_BeforeReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s012_BeforeReweighting.png}
+    \end{subfigure}
+  \end{figure}
+  \begin{center}
+    Need to reweight events to account for efficiency differences between AmpGen samples and LHCb MC
+  \end{center}
+\end{frame}  
+
+\begin{frame}{Efficiency correction of $c_i$ and $s_i$}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s01_AfterReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s03_AfterReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s12_AfterReweighting.png}
+    \end{subfigure}
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s23_AfterReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s012_AfterReweighting.png}
+    \end{subfigure}
+  \end{figure}
+  \begin{center}
+    After reweighing, use weights to recalculate $c_i$ and $s_i$ \\
+    Conclusion: Efficiency correction of $c_i$ and $s_i$ is an order of magnitude smaller than their uncertainties, no systematic uncertainty considered
+  \end{center}
 \end{frame}
 
 \end{document}
