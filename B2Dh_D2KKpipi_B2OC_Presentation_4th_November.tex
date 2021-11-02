@@ -44,7 +44,7 @@
 \newcommand{\myrbrace}[2]{\vspace{#2pt}\scaleleftright[\dimexpr5pt+#1\dimexpr0.06pt]{.}{\rule[\dimexpr2pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{\rbrace}\hspace{6pt}}
 
 % Here's where the presentation starts, with the info for the title slide
-\title[$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$]{Model independent determination of the CKM angle \texorpdfstring{$\gamma$}{gamma} in \texorpdfstring{$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$}{B to K+K-pi+pi-} decays}
+\title[$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$]{Model-independent determination of the CKM angle \texorpdfstring{$\gamma$}{gamma} in \texorpdfstring{$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$}{B to K+K-pi+pi-} decays}
 
 \author{\textbf{Martin Tat} \hspace{0.54em} Guy Wilkinson \hspace{0.54em} Sneha Malde}
 \institute{\normalsize University of Oxford \\ \vspace{0.3cm} \normalsize B2OC Meeting \vspace{-0.2cm}}
@@ -178,14 +178,14 @@
     \begin{itemize}
       \item{\href{https://arxiv.org/abs/hep-ph/0611272}{arXiv:hep-ph/0611272}}
       \item{Amplitude model by FOCUS}
-      \item{Expected $\gamma$ precision with $1000$ candidates: $14^\circ$}
+      \item{Expected $\gamma$ precision from amplitude fit with $1000$ candidates: $14^\circ$}
     \end{itemize}
     \item{CLEO amplitude analysis}
     \begin{itemize}
       \item{\href{https://arxiv.org/abs/1201.5716}{arXiv:1201.5716}}
-      \item{Expected $\gamma$ precision with $2000$ candidates: $11^\circ$}
+      \item{Expected $\gamma$ precision from amplitude fit with $2000$ candidates: $11^\circ$}
     \end{itemize}
-    \item{State of the art amplitude analysis by LHCb :}
+    \item{State of the art amplitude analysis by LHCb:}
     \begin{itemize}
       \item{\href{https://cds.cern.ch/record/2648586?ln=en}{LHCb-PAPER-2018-041}}
       \item{Use to develop efficient binning scheme}
@@ -257,7 +257,7 @@
     \end{itemize}
   \end{itemize}
   \begin{itemize}
-    \item{Amplitude averaged strong phases from BESIII:}
+    \item{Amplitude averaged strong phases can be obtained from BESIII:}
     \begin{center}
       $c_i = \frac{\int_i\dd{\Phi}|\mathcal{A}(D^0)||\mathcal{A}(\bar{D^0})|\cos(\delta_D)}{\sqrt{\int_i\dd{\Phi}\abs{\mathcal{A}(D^0)}^2\int_i\dd{\Phi}\abs{\mathcal{A}(\bar{D^0})}^2}}$ \quad $s_i = \frac{\int_i\dd{\Phi}|\mathcal{A}(D^0)||\mathcal{A}(\bar{D^0})|\sin(\delta_D)}{\sqrt{\int_i\dd{\Phi}\abs{\mathcal{A}(D^0)}^2\int_i\dd{\Phi}\abs{\mathcal{A}(\bar{D^0})}^2}}$
     \end{center}
@@ -397,69 +397,6 @@
   \end{figure}
 \end{frame}
 
-\section{Backgrounds}
-\begin{frame}{Backgrounds}
-  \begin{center}
-    {\huge Backgrounds}
-  \end{center}
-\end{frame}
-
-\begin{frame}{$D\to K\pi\pi\pi$ mis-ID background}
-  \begin{itemize}
-    \setlength\itemsep{0.5em}
-    \item{$B^\pm\to Dh^\pm$, $D\to K\pi\pi\pi$}
-    \item{Single mis-ID: $K\pi\pi\pi\to KK\pi\pi$}
-    \item{Triple mis-ID: $\pi\pi K\pi\to KK\pi\pi$}
-    \item{Use LHCb MC generated with AmpGen, reweight with PIDCalib2}
-  \end{itemize}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_SingleMisID_Dpi_DMass.png}
-      \caption{Single mis-ID}
-    \end{subfigure}%
-    \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_TripleMisID_Dpi_DMass.png}
-      \caption{Triple mis-ID}
-    \end{subfigure}
-    \caption{$D$ invariant mass}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{$D\to K\pi\pi\pi$ mis-ID background}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_SingleMisID_Dpi_BMass.png}
-      \caption{Single mis-ID}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_TripleMisID_Dpi_BMass.png}
-      \caption{Triple mis-ID}
-    \end{subfigure}
-    \caption{$B$ invariant mass}
-  \end{figure}
-  \begin{center}
-    Conclusion: Negligible impact, include in systematics
-  \end{center}
-\end{frame}
-
-\begin{frame}{$D\to K\pi\pi\pi\pi^0$ mis-ID background}
-  \begin{itemize}
-    \setlength\itemsep{0.5em}
-    \item{$B^\pm\to Dh^\pm$, $D\to K\pi\pi\pi[\pi^0]$}
-    \item{$\pi^0$ not reconstructed $\to$ Lower $D$ mass}
-    \item{Single mis-ID: $K\pi\pi\pi\to KK\pi\pi$ $\to$ Higher $D$ mass}
-    \item{Generate RapidSim samples, reweight with PIDCalib2}
-  \end{itemize}
-  \begin{figure}
-    \includegraphics[width = 0.5\textwidth]{Plots/Kpipipipi0BMassB2DpiD2Kpipipi.png}
-  \end{figure}
-  \begin{center}
-    Conclusion: Fix shape from RapidSim, allow yield to float
-  \end{center}
-\end{frame}
-
 \section{Fit to data}
 \begin{frame}{Global fit}
   \begin{center}
@@ -499,6 +436,69 @@
   \end{itemize}
 \end{frame}
 
+\section{Backgrounds}
+\begin{frame}{Backgrounds}
+  \begin{center}
+    {\huge Backgrounds}
+  \end{center}
+\end{frame}
+
+\begin{frame}{$D\to K\pi\pi\pi$ mis-ID background}
+  \begin{itemize}
+    \setlength\itemsep{0.5em}
+    \item{$B^\pm\to Dh^\pm$, $D\to K\pi\pi\pi$}
+    \item{Single mis-ID: $K\pi\pi\pi\to KK\pi\pi$}
+    \item{Triple mis-ID: $\pi\pi K\pi\to KK\pi\pi$}
+    \item{Use LHCb MC generated with AmpGen, reweight with PIDCalib2}
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_SingleMisID_Dpi_DMass.png}
+      \caption{Single mis-ID}
+    \end{subfigure}%
+    \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_TripleMisID_Dpi_DMass.png}
+      \caption{Triple mis-ID}
+    \end{subfigure}
+    \caption{$D$ invariant mass}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$D\to K\pi\pi\pi\pi^0$ mis-ID background}
+  \begin{itemize}
+    \setlength\itemsep{0.5em}
+    \item{$B^\pm\to Dh^\pm$, $D\to K\pi\pi\pi[\pi^0]$}
+    \item{$\pi^0$ not reconstructed $\to$ Lower $D$ mass}
+    \item{Single mis-ID: $K\pi\pi\pi\to KK\pi\pi$ $\to$ Higher $D$ mass}
+    \item{Generate RapidSim samples, reweight with PIDCalib2}
+  \end{itemize}
+  \begin{figure}
+    \includegraphics[width = 0.5\textwidth]{Plots/Kpipipipi0BMassB2DpiD2Kpipipi.png}
+  \end{figure}
+  \begin{center}
+    Conclusion: Fix shape from RapidSim, allow yield to float
+  \end{center}
+\end{frame}
+
+\begin{frame}{$D\to K\pi\pi\pi$ mis-ID background}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_SingleMisID_Dpi_BMass.png}
+      \caption{Single mis-ID}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_TripleMisID_Dpi_BMass.png}
+      \caption{Triple mis-ID}
+    \end{subfigure}
+    \caption{$B$ invariant mass}
+  \end{figure}
+  \begin{center}
+    Conclusion: Negligible impact, include in systematics
+  \end{center}
+\end{frame}
+
 \begin{frame}{Binned CP fit}
   \begin{center}
     {\huge Binned CP fit}
@@ -509,7 +509,10 @@
   \begin{itemize}
     \setlength\itemsep{1.2em}
     \item{Use $2\times 8$ bins}
-    \item{$c_i$ and $s_i$ calculated using MC integration of LHCb amplitude model}
+    \item{$c_i$ and $s_i$ not available yet $\implies$}
+    \begin{itemize}
+      \item{Calculate using MC integration of LHCb amplitude model for now}
+    \end{itemize}
     \item{Fit for CP observables}
     \item{PDF shape parameters fixed from global fit}
     \item{Yield of signal, low mass partially reconstructed background and combinatorial background floated}
@@ -537,6 +540,9 @@
       \includegraphics[width = 1.0\textwidth]{Plots/A_xm_dk_error_WithDataUncertainty.png}
     \end{subfigure}
   \end{figure}
+  \begin{center}
+    Red line: Uncertainty in fit to data
+  \end{center}
 \end{frame}
 
 \begin{frame}{CP observables result: $y_-^{DK}$}
@@ -552,6 +558,9 @@
       \includegraphics[width = 1.0\textwidth]{Plots/A_ym_dk_error_WithDataUncertainty.png}
     \end{subfigure}
   \end{figure}
+  \begin{center}
+    Red line: Uncertainty in fit to data
+  \end{center}
 \end{frame}
 
 \begin{frame}{CP observables result: $x_+^{DK}$}
@@ -567,6 +576,9 @@
       \includegraphics[width = 1.0\textwidth]{Plots/A_xp_dk_error_WithDataUncertainty.png}
     \end{subfigure}
   \end{figure}
+  \begin{center}
+    Red line: Uncertainty in fit to data
+  \end{center}
 \end{frame}
 
 \begin{frame}{CP observables result: $y_+^{DK}$}
@@ -582,6 +594,9 @@
       \includegraphics[width = 1.0\textwidth]{Plots/A_yp_dk_error_WithDataUncertainty.png}
     \end{subfigure}
   \end{figure}
+  \begin{center}
+    Red line: Uncertainty in fit to data
+  \end{center}
 \end{frame}
 
 \begin{frame}{CP observables result: $x_\xi^{D\pi}$}
@@ -597,6 +612,9 @@
       \includegraphics[width = 1.0\textwidth]{Plots/A_Re_xi_dpi_error_WithDataUncertainty.png}
     \end{subfigure}
   \end{figure}
+  \begin{center}
+    Red line: Uncertainty in fit to data
+  \end{center}
 \end{frame}
 
 \begin{frame}{CP observables result: $y_\xi^{D\pi}$}
@@ -612,6 +630,9 @@
       \includegraphics[width = 1.0\textwidth]{Plots/A_Im_xi_dpi_error_WithDataUncertainty.png}
     \end{subfigure}
   \end{figure}
+  \begin{center}
+    Red line: Uncertainty in fit to data
+  \end{center}
 \end{frame}
 
 \section{Systematic uncertainty}
@@ -624,9 +645,12 @@
 \begin{frame}{$c_i$ and $s_i$ systematic uncertainty}
   \begin{itemize}
     \setlength\itemsep{1.5em}
-    \item{Uncertainty of $c_i$ and $s_i$ in BESIII analysis (mostly statistical)}
+    \item{$c_i$ and $s_i$ uncertainty will come from BESIII analysis}
+    \begin{itemize}
+      \item{Mostly statistical in origin}
+    \end{itemize}
     \item{Largest systematic uncertainty}
-    \item{Take uncertainties from $D\to4\pi$ strong phase analysis and extrapolate to $\SI{20}{\per\femto\barn}$}
+    \item{Use estimated uncertainties corresponding to $\SI{20}{\per\femto\barn}$ at $\psi(3770)$}
     \item{Smear $c_i$ and $s_i$ and do many fits to data}
   \end{itemize}
 \end{frame}
@@ -658,10 +682,10 @@
   \end{tabular}
 \end{frame}
 
-\section{Summary and conclusion}
-\begin{frame}{Summary and conclusion}
+\section{Summary of $KK\pi\pi$ analysis}
+\begin{frame}{Summary of $KK\pi\pi$ analysis}
   \begin{center}
-    {\huge Summary and conclusion}
+    {\huge Summary of $KK\pi\pi$ analysis}
   \end{center}
 \end{frame}
 
@@ -681,26 +705,7 @@
   \begin{itemize}
     \item{Note: Currently using $c_i$ and $s_i$ from the \underline{LHCb model}}
     \item{Publication strategy: Publish current results together with binned yields $\to$ Redo fit to obtain model-independent CP observables once $c_i$ and $s_i$ from BESIII are available}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Interpretation in terms of $\gamma$}
-  \begin{itemize}
-    \item{Interpret in terms of physics parameters:}
-  \end{itemize}
-  \begin{align*}
-    \gamma &= (x.x^{+14}_{-15})^\circ, \\
-    \delta_B^{DK} &= (x.x^{+15}_{-14})^\circ, \\
-    r_B^{DK} &= x.x^{+0.019}_{-0.018}, \\
-    \delta_B^{D\pi} &= (x.x^{+117}_{-63})^\circ, \\
-    r_B^{D\pi} &= x.x^{+0.0052}_{-0.0024}.
-  \end{align*}
-  \begin{itemize}
-    \item{Next steps:}
-    \begin{itemize}
-      \item{ANA note ready}
-      \item{Will update uncertainty of $c_i$ and $s_i$ with model-dependent values}
-    \end{itemize}
+    \item{Will update $c_i$ and $s_i$ with model-dependent uncertainties}
   \end{itemize}
 \end{frame}
 
@@ -709,7 +714,7 @@
     \setlength\itemsep{1em}
     \item{The mode $B^\pm\to Dh^\pm$, $D\to\pi^+\pi^-\pi^+\pi^-$ very similar}
     \item{Run this through \underline{same} selection (including BDT)}
-    \item{Can measure GLW CP observables as additional constraints on $\gamma$:}
+    \item{Can measure quasi-GLW observables as additional constraints on $\gamma$:}
   \end{itemize}
   \begin{align*}
     A_h =& \frac{\Gamma(B^-\to Dh^-) - \Gamma(B^+\to Dh^+)}{\Gamma(B^-\to Dh^-) + \Gamma(B^+\to Dh^+)}, \\
@@ -734,6 +739,23 @@
   \begin{center}
     Compare with PDG: $\SI{3.06(16)}{}$
   \end{center}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+  \begin{center}
+    {\huge Conclusion}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Conclusion}
+  \begin{itemize}
+    \setlength\itemsep{2em}
+    \item{Binned $\gamma$ analysis of $B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$ is mostly complete, with promising results}
+    \item{ANA note is ready}
+    \item{Add quasi-GLW observables of $K^+K^-\pi^+\pi^-$ and $\pi^+\pi^-\pi^+\pi^-$ to further constrain $\gamma$}
+    \item{Will publish model-dependent measurement for now, update with model-independent results when $c_i$ and $s_i$ from BESIII are available}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Thank you!}
@@ -949,7 +971,7 @@
     \end{itemize}
     \item{Single mis-ID: $K\mu\pi\pi\to KK\pi\pi$}
     \item{Double mis-ID: $K\pi\pi\mu\to KK\pi\pi$}
-    \item{Generate Rapidsim samples, reweight with PIDCalib2}
+    \item{Generate RapidSim samples, reweight with PIDCalib2}
   \end{itemize}
 \end{frame}
 
