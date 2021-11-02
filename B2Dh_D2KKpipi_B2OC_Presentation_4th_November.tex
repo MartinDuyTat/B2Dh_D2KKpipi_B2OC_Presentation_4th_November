@@ -44,7 +44,7 @@
 \newcommand{\myrbrace}[2]{\vspace{#2pt}\scaleleftright[\dimexpr5pt+#1\dimexpr0.06pt]{.}{\rule[\dimexpr2pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{\rbrace}\hspace{6pt}}
 
 % Here's where the presentation starts, with the info for the title slide
-\title[$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$]{Determination of the CKM angle \texorpdfstring{$\gamma$}{gamma} in \texorpdfstring{$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$}{B to K+K-pi+pi-} decays}
+\title[$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$]{Model independent determination of the CKM angle \texorpdfstring{$\gamma$}{gamma} in \texorpdfstring{$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$}{B to K+K-pi+pi-} decays}
 
 \author{\textbf{Martin Tat} \hspace{0.54em} Guy Wilkinson \hspace{0.54em} Sneha Malde}
 \institute{\normalsize University of Oxford \\ \vspace{0.3cm} \normalsize B2OC Meeting \vspace{-0.2cm}}
@@ -64,12 +64,17 @@
   \tableofcontents
 \end{frame}
 
+\begin{frame}{Introduction to the CKM angle $\gamma$}
+  \begin{center}
+    {\huge Introduction to the CKM angle $\gamma$}
+  \end{center}
+\end{frame}
+
 \section{Introduction to the CKM angle \texorpdfstring{$\gamma$}{gamma}}
 \begin{frame}{$\gamma$ and the unitary triangle}
   \begin{itemize}
-    \setlength\itemsep{1.0em}
-    \item{Unitarity of CKM matrix: $V_{ud}V^*_{ub} + V_{cd}V^*_{cb} + V_{td}V^*_{tb} = 0\implies$}
-    \end{itemize}
+    \item{CP violation in SM is described by the Unitary Triangle}
+  \end{itemize}
     \begin{center}
     $\gamma = \text{arg}\Big(-\frac{V_{ud}V^*_{ub}}{V_{cd}V^*_{cb}}\Big)$
   \end{center}
@@ -392,25 +397,6 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{BDT optimization study}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/BDTCutVersusGammaErrorRun1.png}
-      \caption{Run $1$}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/BDTCutVersusGammaErrorRun2.png}
-      \caption{Run $2$}
-    \end{subfigure}
-  \end{figure}
-  \begin{itemize}
-    \item{Run $1$: Pick BDT working point at 0.65}
-    \item{Run $2$: Pick BDT working point at 0.75}
-  \end{itemize}
-\end{frame}
-
 \section{Backgrounds}
 \begin{frame}{Backgrounds}
   \begin{center}
@@ -487,7 +473,8 @@
     \item{PDF shape parameterization identical to LHCb-ANA-2020-001}
     \item{Signal: Gaussian + Modified Cruijff}
     \item{Shape fixed from MC, yield and width floated}
-    \item{Exponential background}
+    \item{Combinatorial background (exponential)}
+    \item{Partially reconstructed background (dini shapes)}
   \end{itemize}
   \vspace{0.5cm}
   \begin{equation*}
@@ -497,30 +484,6 @@
       \exp\Big(\frac{-\Delta m^2(1 + \beta\Delta m^2)}{2\sigma^2 + \alpha_R\Delta m^2}\Big), \quad \Delta m = m - m_B > 0 \\
     \end{cases}
   \end{equation*}
-\end{frame}
-
-\begin{frame}{Partially reconstructed background}
-  \begin{itemize}
-    \setlength\itemsep{1.3em}
-    \item{$B^\pm\to D\pi^\pm$:}
-    \begin{enumerate}
-    \setlength\itemsep{0.4em}
-      \item{$B^\pm\to (D^{*0}\to D^0[\pi^0])\pi^\pm$}
-      \item{$B^0\to (D^{*\mp}\to D^0[\pi^\mp])\pi^\pm$}
-      \item{$B^{\pm(0)}\to D^0[\pi^{0(\mp)}]\pi^\pm$}
-      \item{$B^\pm\to(D^{*0}\to D^0[\gamma])\pi^\pm$}
-    \end{enumerate}
-    \item{$B^\pm\to DK^\pm$:}
-    \begin{enumerate}
-      \setlength\itemsep{0.4em}
-      \item{$B^\pm\to (D^{*0}\to D^0[\pi^0])K^\pm$}
-      \item{$B^0\to (D^{*\mp}\to D^0[\pi^\mp])K^\pm$}
-      \item{$B^{\pm(0)}\to D^0[\pi^{0(\mp)}]K^\pm$}
-      \item{$B^\pm\to(D^{*0}\to D^0[\gamma])K^\pm$}
-      \item{$B_s^0\to\bar{D^0}[\pi^+]K^-$}
-      \item{Mis-ID from partially reconstructed $B^\pm\to D\pi^\pm$ channel}
-    \end{enumerate}
-  \end{itemize}
 \end{frame}
 
 \begin{frame}{Global fit}
@@ -668,28 +631,6 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Remaining systematic uncertainties}
-  Different strategies for evaluating systematic uncertainties:
-  \vspace{0.2cm}
-  \begin{itemize}
-    \setlength\itemsep{1em}
-    \item{Generate toy datasets with systematics, fit with default model and take the bias as a systematic:}
-    \begin{itemize}
-      \item{Small backgrounds ($D\to K(X)l\nu_l$, $D\to K\pi\pi\pi$, $B\to Dl\nu_l$, $\Lambda_b$)}
-      \item{Bin dependent mass shape}
-      \item{Low mass physics effects}
-    \end{itemize}
-    \item{Do multiple fits to data while smearing parameters:}
-    \begin{itemize}
-      \item{$c_i$ and $s_i$}
-      \item{Mass shape}
-      \item{Fixed yield fractions}
-      \item{PID efficiency}
-    \end{itemize}
-    \item{Fit bias: Take bias toys as systematic uncertainty}
-  \end{itemize}
-\end{frame}
-
 \begin{frame}{Summary of all systematic uncertainties}
   \begin{tabular}{lcccccc} 
         \hline
@@ -757,9 +698,8 @@
   \begin{itemize}
     \item{Next steps:}
     \begin{itemize}
-      \item{ANA note (more or less) ready}
-      \item{Calculate model uncertainty of $c_i$ and $s_i$}
-      \item{Other minor details}
+      \item{ANA note ready}
+      \item{Will update uncertainty of $c_i$ and $s_i$ with model-dependent values}
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -953,6 +893,49 @@
   \end{tabular}
 \end{frame}
 
+\begin{frame}{BDT optimization study}
+  \begin{figure}
+    \centering
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/BDTCutVersusGammaErrorRun1.png}
+      \caption{Run $1$}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/BDTCutVersusGammaErrorRun2.png}
+      \caption{Run $2$}
+    \end{subfigure}
+  \end{figure}
+  \begin{itemize}
+    \item{Run $1$: Pick BDT working point at 0.65}
+    \item{Run $2$: Pick BDT working point at 0.75}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Partially reconstructed background}
+  \begin{itemize}
+    \setlength\itemsep{1.3em}
+    \item{$B^\pm\to D\pi^\pm$:}
+    \begin{enumerate}
+    \setlength\itemsep{0.4em}
+      \item{$B^\pm\to (D^{*0}\to D^0[\pi^0])\pi^\pm$}
+      \item{$B^0\to (D^{*\mp}\to D^0[\pi^\mp])\pi^\pm$}
+      \item{$B^{\pm(0)}\to D^0[\pi^{0(\mp)}]\pi^\pm$}
+      \item{$B^\pm\to(D^{*0}\to D^0[\gamma])\pi^\pm$}
+    \end{enumerate}
+    \item{$B^\pm\to DK^\pm$:}
+    \begin{enumerate}
+      \setlength\itemsep{0.4em}
+      \item{$B^\pm\to (D^{*0}\to D^0[\pi^0])K^\pm$}
+      \item{$B^0\to (D^{*\mp}\to D^0[\pi^\mp])K^\pm$}
+      \item{$B^{\pm(0)}\to D^0[\pi^{0(\mp)}]K^\pm$}
+      \item{$B^\pm\to(D^{*0}\to D^0[\gamma])K^\pm$}
+      \item{$B_s^0\to\bar{D^0}[\pi^+]K^-$}
+      \item{Mis-ID from partially reconstructed $B^\pm\to D\pi^\pm$ channel}
+    \end{enumerate}
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{$D$ semileptonic backgrounds}
   \begin{itemize}
     \setlength\itemsep{1em}
@@ -986,6 +969,28 @@
   \begin{center}
     Conclusion: Negligible impact, include in systematics
   \end{center}
+\end{frame}
+
+\begin{frame}{Remaining systematic uncertainties}
+  Different strategies for evaluating systematic uncertainties:
+  \vspace{0.2cm}
+  \begin{itemize}
+    \setlength\itemsep{1em}
+    \item{Generate toy datasets with systematics, fit with default model and take the bias as a systematic:}
+    \begin{itemize}
+      \item{Small backgrounds ($D\to K(X)l\nu_l$, $D\to K\pi\pi\pi$, $B\to Dl\nu_l$, $\Lambda_b$)}
+      \item{Bin dependent mass shape}
+      \item{Low mass physics effects}
+    \end{itemize}
+    \item{Do multiple fits to data while smearing parameters:}
+    \begin{itemize}
+      \item{$c_i$ and $s_i$}
+      \item{Mass shape}
+      \item{Fixed yield fractions}
+      \item{PID efficiency}
+    \end{itemize}
+    \item{Fit bias: Take bias toys as systematic uncertainty}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Efficiency related systematics}
