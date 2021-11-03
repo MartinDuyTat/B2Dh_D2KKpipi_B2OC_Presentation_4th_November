@@ -431,8 +431,8 @@
   \end{figure}
   \vspace{-0.5cm}
   \begin{itemize}
-    \item{$B^\pm\to DK^\pm$ yield: $\SI{3543(75)}{}$}
-    \item{$B^\pm\to D\pi^\pm$ yield: $\SI{47503(260)}{}$}
+    \item{$B^\pm\to DK^\pm$ yield: $\SI{3306(75)}{}$}
+    \item{$B^\pm\to D\pi^\pm$ yield: $\SI{46695(256)}{}$}
   \end{itemize}
 \end{frame}
 
@@ -440,6 +440,42 @@
 \begin{frame}{Backgrounds}
   \begin{center}
     {\huge Backgrounds}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Charmless background}
+  \begin{itemize}
+    \item{$B\to KK\pi\pi K$ background in $B\to DK$ channel}
+    \item{Flight significance cut at $2$}
+    \item{Fix remaining background with Gaussian shape of lower sideband}
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/CharmlessYield_B2DK_KKpipi_noFScut_PlusMinus_AllBins.png}
+      \caption{No FS cut}
+    \end{subfigure}%
+    \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/CharmlessYield_B2DK_KKpipi_FScut_PlusMinus_AllBins.png}
+      \caption{FS cut at $2$}
+    \end{subfigure}
+    \caption{$B$ invariant mass in lower $D$ sideband}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$D\to K\pi\pi\pi\pi^0$ mis-ID background}
+  \begin{itemize}
+    \setlength\itemsep{0.5em}
+    \item{$B^\pm\to Dh^\pm$, $D\to K\pi\pi\pi[\pi^0]$}
+    \item{$\pi^0$ not reconstructed $\to$ Lower $D$ mass}
+    \item{Single mis-ID: $K\pi\pi\pi\to KK\pi\pi$ $\to$ Higher $D$ mass}
+    \item{Generate RapidSim samples, reweight with PIDCalib2}
+  \end{itemize}
+  \begin{figure}
+    \includegraphics[width = 0.5\textwidth]{Plots/Kpipipipi0BMassB2DpiD2Kpipipi.png}
+  \end{figure}
+  \begin{center}
+    Conclusion: Fix shape from RapidSim, allow yield to float
   \end{center}
 \end{frame}
 
@@ -463,22 +499,6 @@
     \end{subfigure}
     \caption{$D$ invariant mass}
   \end{figure}
-\end{frame}
-
-\begin{frame}{$D\to K\pi\pi\pi\pi^0$ mis-ID background}
-  \begin{itemize}
-    \setlength\itemsep{0.5em}
-    \item{$B^\pm\to Dh^\pm$, $D\to K\pi\pi\pi[\pi^0]$}
-    \item{$\pi^0$ not reconstructed $\to$ Lower $D$ mass}
-    \item{Single mis-ID: $K\pi\pi\pi\to KK\pi\pi$ $\to$ Higher $D$ mass}
-    \item{Generate RapidSim samples, reweight with PIDCalib2}
-  \end{itemize}
-  \begin{figure}
-    \includegraphics[width = 0.5\textwidth]{Plots/Kpipipipi0BMassB2DpiD2Kpipipi.png}
-  \end{figure}
-  \begin{center}
-    Conclusion: Fix shape from RapidSim, allow yield to float
-  \end{center}
 \end{frame}
 
 \begin{frame}{$D\to K\pi\pi\pi$ mis-ID background}
@@ -656,11 +676,16 @@
 \end{frame}
 
 \begin{frame}{Summary of all systematic uncertainties}
+  \vspace{-0.3cm}
+  \begin{center}
+    Uncertainties of CP observables in units of $10^{-2}$
+  \end{center}
+  \vspace{0.02cm}
   \begin{tabular}{lcccccc} 
         \hline
         Source & $x_-^{DK}$ & $y_-^{DK}$ & $x_+^{DK}$ & $y_+^{DK}$ & $x_\xi^{D\pi}$ & $y_\xi^{D\pi}$ \\
         \hline
-        Statistical                              & 2.73  & 3.23  & 2.38  & 2.90  & 4.30  & 5.27  \\
+        Statistical                              & 2.44  & 2.87  & 2.16  & 2.87  & 3.47  & 4.30  \\
         \hline
         $c_i$, $s_i$                             & 0.66  & 1.55  & 0.32  & 1.31  & 1.73  & 1.03  \\
         \hline
@@ -694,12 +719,12 @@
     \item{Measured CP observables:}
   \end{itemize}
   \begin{align*}
-    x_-^{DK} =& (x.x \pm 2.7 \pm 0.4 \pm 0.7)\times 10^{-2}, \\
-    y_-^{DK} =& (x.x \pm 3.2 \pm 0.2 \pm 1.6)\times 10^{-2}, \\
-    x_+^{DK} =& (x.x \pm 2.4 \pm 0.3 \pm 0.3)\times 10^{-2}, \\
+    x_-^{DK} =& (x.x \pm 2.4 \pm 0.4 \pm 0.7)\times 10^{-2}, \\
+    y_-^{DK} =& (x.x \pm 2.9 \pm 0.2 \pm 1.6)\times 10^{-2}, \\
+    x_+^{DK} =& (x.x \pm 2.2 \pm 0.3 \pm 0.3)\times 10^{-2}, \\
     y_+^{DK} =& (x.x \pm 2.9 \pm 0.3 \pm 1.3)\times 10^{-2}, \\
-    x_\xi^{D\pi} =& (x.x \pm 4.3 \pm 0.9 \pm 1.7)\times 10^{-2}, \\
-    y_\xi^{D\pi} =& (x.x \pm 5.3 \pm 0.6 \pm 1.0)\times 10^{-2},
+    x_\xi^{D\pi} =& (x.x \pm 3.5 \pm 0.9 \pm 1.7)\times 10^{-2}, \\
+    y_\xi^{D\pi} =& (x.x \pm 4.3 \pm 0.6 \pm 1.0)\times 10^{-2},
   \end{align*}
   \vspace{-0.5cm}
   \begin{itemize}
